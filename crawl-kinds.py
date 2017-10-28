@@ -9,11 +9,13 @@ import logging
 from random import randint
 from time import sleep
 import cPickle as pickle
+import argparse
 import sys
 reload(sys)
 sys.setdefaultencoding("utf-8")
 
 __author__ = 'heshed'
+
 
 def crawl_detail(input_path, out_directory):
     """
@@ -178,4 +180,13 @@ if __name__ == '__main__':
     logging.basicConfig(format='%(asctime)s: %(levelname)s: %(message)s',
                         filename='output.log',
                         level=logging.INFO)
-    crawl_detail('source/NewsResult_20140101-20161231.csv', '결과-상세')
+
+    default_input_path = 'source/NewsResult_20140101-20161231.csv'
+    default_output_path = '결과-상세'
+
+    parser = argparse.ArgumentParser(description="상세 뉴스 데이터를 저장합니다.")
+    parser.add_argument("-i", default=default_input_path, help="input csv path: ex) " + default_input_path)
+    parser.add_argument("-o", default=default_output_path, help="output directory: ex) " + default_output_path)
+    args = parser.parse_args()
+
+    crawl_detail(args.i, args.o)
