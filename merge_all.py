@@ -8,10 +8,7 @@ import argparse
 __author__ = 'heshed'
 
 
-def merge():
-    input_dir = '결과-상세'
-    output_path = '결과-통짜/all-in-one.txt'
-
+def merge(input_dir, output_path):
     print '--- [뉴스 통짜 파일 제작 시작]'
     of = file(output_path, 'w')
 
