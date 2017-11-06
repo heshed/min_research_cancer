@@ -4,6 +4,9 @@ min_research_cancer
 
 # 다운로드
 
+## v3.0
+- [min_research_cancer-v3.0.zip](https://github.com/heshed/min_research_cancer/archive/v3.0.zip)
+
 ## v2.0
 - [min_research_cancer-v2.0.zip](https://github.com/heshed/min_research_cancer/archive/v2.0.zip)
 
