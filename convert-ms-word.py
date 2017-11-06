@@ -12,7 +12,7 @@ __author__ = 'heshed'
 def convert_to_docx(input_dir, output_dir):
     print '--- [MS-WORD 제작 시작]'
 
-    document_size = 1000
+    document_size = 200
     document_pool = {}
 
     if not os.path.isdir(output_dir):
@@ -43,7 +43,7 @@ def convert_to_docx(input_dir, output_dir):
 
                 file_name = os.path.join(output_dir, '{}-{}.docx'.format(item, index))
 
-                if file_count % 100 == 0:
+                if file_count % 50 == 0:
                     print '.',
                 if file_count % document_size == 0:
                     print

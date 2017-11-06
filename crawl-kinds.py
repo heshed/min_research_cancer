@@ -68,6 +68,8 @@ def crawl_detail(input_path, out_directory):
 
                 # write json response
 
+                if not os.path.exists('json_response'):
+                    os.makedirs('json_response')
                 json_path = os.path.join('json_response', os.path.basename(input_path)+'.json')
                 write_json(r.json(), json_path)
             else:
@@ -164,11 +166,15 @@ def write_detail(result, output_dir, index, link):
 날짜: {date}
 기자: {author}
 링크: {link}
+ID: {id}
+카테고리: {category}
 본문: {content}
 '''.format(title=detail['TITLE'],
            date=detail['DATE'],
            author=detail['BYLINE'],
            link=link,
+           id=detail['NEWS_ID'],
+           category=detail['CATEGORY_MAIN'],
            content=detail['CONTENT'].encode('UTF-8'),
            )
 
