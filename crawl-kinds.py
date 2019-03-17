@@ -187,7 +187,7 @@ if __name__ == '__main__':
                         filename='output.log',
                         level=logging.INFO)
 
-    default_input_path = 'source/NewsResult_20140101-20161231.csv'
+    default_input_path = 'source/NewsResult_20170101-20171231.csv'
     default_output_path = '결과-상세'
 
     parser = argparse.ArgumentParser(description="상세 뉴스 데이터를 저장합니다.")
